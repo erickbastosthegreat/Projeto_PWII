@@ -75,21 +75,6 @@ header nav a:hover {
   margin-bottom: 30px;
 }
 
-.cards {
-  display: flex;
-    justify-content: center;
-      flex-wrap: wrap;
-        gap: 20px;
-}
-
-.card {
-  background-color: white;
-    padding: 20px;
-      width: 200px;
-        border-radius: 8px;
-          box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
 footer {
   background-color: #333;
     color: white;
