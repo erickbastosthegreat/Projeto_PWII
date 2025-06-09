@@ -9,16 +9,35 @@
 <body>
 
         <section class="profissionais">
-            <h1>Seus medicos:</h1>
-            <div class="cards">
-                <div class="card">Doutor Antonio Pitomba
+           <header><h2>Seus medicos:</h2> </header> 
+           <div class="cards">
+  <div class="card">
+    Doutor Antonio Pitomba
 
-                 <img src="normal.png" alt="">
-                </div>
+    <div class="image-container">
+      <img src="normal.png" alt="">
+
+      <div class="info">
+        <strong>Informações da imagem:</strong><br>
+        Título: Imagem de Exemplo<br>
+        Resolução: 300x200<br>
+        Descrição: Esta é uma imagem genérica para teste.
+      </div>
+    </div>
+  </div>
                 <div class="card">Doutor Evaldo Pinto 
 
-                    <img src="hasha.png" alt="">
-                </div>
+                    <div class="image-container">
+      <img src="hasha.png" alt="">
+
+      <div class="info">
+        <strong>Informações da imagem:</strong><br>
+        Título: Imagem de Exemplo<br>
+        Resolução: 300x200<br>
+        Descrição: Esta é uma imagem genérica para teste.
+      </div>
+    </div>
+  </div>
                 <div class="card">Doutora Carla Medusa
 
                     <img src="meme.png" alt="">
@@ -29,6 +48,24 @@
                 </div>
             </div>
         </section>
+
+        <script>
+  const imageContainers = document.querySelectorAll('.image-container');
+
+imageContainers.forEach(container => {
+  const img = container.querySelector('img');
+  const info = container.querySelector('.info');
+
+  img.addEventListener('mouseenter', () => {
+    info.style.display = 'block';
+  });
+
+  img.addEventListener('mouseleave', () => {
+    info.style.display = 'none';
+  });
+});
+</script>
+
 
 </body>
 </html>
