@@ -1,71 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="medicos.css">
-    <title>Medicos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="medicos.css">
+  <title>Medicos</title>
 </head>
+
 <body>
 
-        <section class="profissionais">
-           <header><h2>Seus medicos:</h2> </header> 
-           <div class="cards">
-  <div class="card">
-    Doutor Antonio Pitomba
+  <section class="profissionais">
+    <header>
+      <h2>Seus medicos:</h2>
+    </header>
+    <div class="cards">
+      <div class="card">
+        Doutor Antonio Pitomba
 
-    <div class="image-container">
-      <img src="imagens/normal.png" alt="">
+        <div class="image-container">
+          <img src="imagens/normal.png" alt="">
 
-      <div class="info">
-        <strong>Informações da imagem:</strong><br>
-        Título: Imagem de Exemplo<br>
-        Resolução: 300x200<br>
-        Descrição: Esta é uma imagem genérica para teste.
+          <div class="info">
+            <strong>Urologista</strong><br>
+            Formado em Harvard<br>
+            45 anos, 1.95 de altura<br>
+            Descrição: Super gentil e carinhoso com seus pacientes.
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-                <div class="card">Doutor Evaldo Pinto 
+      <div class="card">Doutor Evaldo Pinto
 
-                    <div class="image-container">
-      <img src="imagens/hasha.png" alt="">
+        <div class="image-container">
+          <img src="imagens/hasha.png" alt="">
 
-      <div class="info">
-        <strong>Informações da imagem:</strong><br>
-        Título: Imagem de Exemplo<br>
-        Resolução: 300x200<br>
-        Descrição: Esta é uma imagem genérica para teste.
+          <div class="info">
+            <strong>Dentista</strong><br>
+            Formado na USP<br>
+            36 anos, 1.86 de altura<br>
+            Descrição: Com suas mãos ele faz magica nos seus dentes.
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-                <div class="card">Doutora Carla Medusa
+      <div class="card">Doutora Carla Medusa
+        <div class="image-container">
+          <img src="imagens/meme.png" alt="">
+          <div class="info">
+            <strong>Clínica Geral</strong><br>
+            Formada em Hogwarts<br>
+            40 anos, 1.70 de altura<br>
+            Descrição: Especialista em feitiços de cura.
+          </div>
+        </div>
+      </div>
 
-                    <img src="imagens/meme.png" alt="">
-                </div>
-                <div class="card">Doutora Laura Chorona
+      <div class="card">Doutora Laura Chorona
+        <div class="image-container">
+          <img src="imagens/chocho.png" alt="">
+          <div class="info">
+            <strong>Psiquiatra</strong><br>
+            Formada em Oxford<br>
+            38 anos, 1.65 de altura<br>
+            Descrição: Excelente ouvinte, com empatia e sabedoria.
+          </div>
+        </div>
+      </div>
 
-                    <img src="imagens/chocho.png" alt="">
-                </div>
-            </div>
-        </section>
+  </section>
 
-        <script>
-  const imageContainers = document.querySelectorAll('.image-container');
+  <script>
+    const imageContainers = document.querySelectorAll('.image-container');
 
-imageContainers.forEach(container => {
-  const img = container.querySelector('img');
-  const info = container.querySelector('.info');
+    imageContainers.forEach(container => {
+      const img = container.querySelector('img');
+      const info = container.querySelector('.info');
 
-  img.addEventListener('mouseenter', () => {
-    info.style.display = 'block';
-  });
+      img.addEventListener('mouseenter', () => {
+        info.style.display = 'block';
+      });
 
-  img.addEventListener('mouseleave', () => {
-    info.style.display = 'none';
-  });
-});
-</script>
+      img.addEventListener('mouseleave', () => {
+        info.style.display = 'none';
+      });
+    });
+  </script>
 
 
 </body>
+
 </html>
