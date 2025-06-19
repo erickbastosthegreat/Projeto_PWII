@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcar Consulta</title>
+    <link rel="stylesheet" href="consulta.css">
+</head>
+<body>
+    <div class="container">   
+        <h1>Marcar Consulta</h1>
+        <form action="consulta.php" method="post">
+            <label for="medico">Selecione o médico:</label>
+            <select id="medico" name="medico">
+                <option value="antonio">Doutor Antonio Pitomba(Urologista)</option>
+                <option value="evaldo">Doutor Evaldo Pinto(Dentista)</option>
+                <option value="carla">Doutora Carla Medusa(Psiquiatra)</option>
+                <option value="laura">Doutora Laura Chorona</option>
+            </select>
+
+            <label for="data">Data da consulta:</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="hora">Hora da consulta:</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <button type="submit">Marcar Consulta</button>
+        </form>
+</body>
+</html>
