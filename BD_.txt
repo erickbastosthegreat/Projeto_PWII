@@ -6,13 +6,33 @@ CREATE TABLE cliente (
 
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100),
-    telefone VARCHAR(20),
-    data_nascimento DATE,
     email VARCHAR(100),
     senha VARCHAR(255),
-    cpf VARCHAR(20)
-    
+    telefone VARCHAR(20),
+    cpf VARCHAR(20),
+    data_nascimento DATE
 );
 
-select * from cliente
+create table medico(
+id int not null auto_increment primary key,
+nome varchar (20),
+especialidade varchar (15),
+descricao varchar(255)); 
+
+
+
+create table consulta (
+id_medico int,
+data_consulta date,
+hora_consulta time,
+foreign key (id_medico) references medico(id));
+
+
+insert into medico (nome, especialidade, descricao) values
+('Antonio Pitomba', 'Urologista', 'Formado em Havard - 45 anos - 1,95 metros - Super gentil e carinhoso com seus pacientes.'),
+ ('Evaldo Pinto', 'Dentista', 'Formado na USP - 36 anos - 1,86 metros - Com suas mãos ele faz magica nos seu dentes.'),
+ ('Carla Medusa', 'Clínica Geral', 'Formada em Hogwarts - 40 anos - 1,70 metros - Especialista em feitiços de cura.'),
+ ('Laura Chorona', 'Psiquiatra', 'Formada em Oxford - 38 anos - 1,65 metros - Exelente ouvinte, com empatia e sabedoria.');
+
+select * from medico
 

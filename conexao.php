@@ -9,8 +9,8 @@
 
 <?php
 $host = 'localhost';
-$usuario = 'root';      // usuário do seu banco
-$senha = 'root';            // senha do banco
+$usuario = 'Leirbag';      // usuário do seu banco
+$senha = 'MySqsenha';            // senha do banco
 $banco = 'CLINICA';  // substitua pelo nome do seu banco
 
 $conn = new mysqli(hostname: $host, username: $usuario, password: $senha, database: $banco);

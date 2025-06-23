@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Saúde+</title>
+    <link rel="stylesheet" href="inicio.css">
+</head>
+
+<body>
+    <header> 
+        <button class="menu-toggle" id="openMenu" aria-label="Abrir menu lateral">☰ Menu</button>
+        <center><h1>Clínica Dizuz BasEdFer</h1></center>
+       
+    </header>
+    
+    <!-- Navbar lateral (oculta por padrão) -->
+    <nav class="navbar" id="navbar" aria-label="Menu lateral">
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <button class="close-btn" id="closeMenu" aria-label="Fechar menu lateral">&times;</button>
+        <ul>
+            <li><a href="medicos.html">Nosso profisisonais.</a></li>
+            <li><a href="Cadastro.html">Cadastre-se e a agende uma consulta!</a></li>
+            <li><a href="Login.html">Ações e componentes do polo aquático</a></li>
+            <li><a href="#Duracao">Duração das partidas</a></li>
+            <li><a href="form 1.html">Coloque suas informações para uma pesquisa interna</a></li>
+        </ul>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+    
+    <main>
+        <section class="banner">
+            <h2>Seu CRM. No seu celular.</h2>
+            <p>Cuide da sua saúde com facilidade e segurança.</p>
+            <a href="Cadastro.html" class="botao">Acesse Agora</a>
+        </section>
+
+        <section class="servicos">
+            <h2>Serviços</h2>
+            <div class="servico">
+                <h3>Agendamento Online</h3>
+                <p>Agende consultas com médicos de diversas especialidades.</p><br><hr>
+            </div>
+            <div class="servico">
+                <h3>Telemedicina</h3>
+                <p>Consulte-se com profissionais de saúde sem sair de casa.</p><br><hr>
+            </div>
+            <div class="servico">
+                <h3>Prontuário Eletrônico</h3>
+                <p>Acesse seu histórico médico de forma rápida e segura.</p><br><hr>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Telefone:(11) 4002-8922 | Email: miguelitomazzola@gmail.org.br</p>
+        <p>Endereço: São Paulo | © 2025 Clínica Saúde+</p>
+    </footer>
+
+    <script>
+        const openBtn = document.getElementById('openMenu');
+        const closeBtn = document.getElementById('closeMenu');
+        const navbar = document.getElementById('navbar');
+        const overlay = document.getElementById('overlay');
+
+        openBtn.onclick = function() {
+            navbar.classList.add('active');
+            overlay.classList.add('active');
+        };
+        closeBtn.onclick = function() {
+            navbar.classList.remove('active');
+            overlay.classList.remove('active');
+        };
+        overlay.onclick = function() {
+            navbar.classList.remove('active');
+            overlay.classList.remove('active');
+        };
+        // Fecha ao clicar em qualquer link do menu
+        document.querySelectorAll('.navbar ul a').forEach(link => {
+            link.onclick = function() {
+                navbar.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

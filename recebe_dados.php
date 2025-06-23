@@ -12,14 +12,18 @@ require 'conexao.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST['name'];
-    $telefone = $_POST['telefone'];
-    $data_nascimento = $_POST['data'];
     $email = $_POST['email'];
     $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+    $telefone = $_POST['telefone'];
+    $cpf = $_POST['cpf'];
+    $data_nascimento = $_POST['data'];
+
+    
+
     $cpf = $_POST['CPF'];
 
-    $stmt = $conn->prepare("INSERT INTO cliente (nome, telefone, data_nascimento, email, senha, cpf) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssss", $nome, $telefone, $data_nascimento, $email, $senha, $cpf);
+    $stmt = $conn->prepare("INSERT INTO cliente (nome, email, senha, telefone, data_nascimento, cpf) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssss", $nome, $temail, $senha, $telefone,$cpf, $data_nascimento);
 
     if ($stmt->execute()) {
         // redirecionar após sucesso

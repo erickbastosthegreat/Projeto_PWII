@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <!-- Adicione sua fonte favorita se quiser -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+    <!-- Adicione o link para os ícones, se quiser usar Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+
+        
+        <form action="recebe_dados.php" method="post" class="card">
+            <h1>Cadastre-se</h1>
+            <div class="input-group">
+                <input type="text" id="nome" name="name" placeholder="Digite seu nome completo" required>
+                <span class="icon"><i class="fa fa-user"></i></span>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                <span class="icon"><i class="fa fa-envelope"></i></span>
+            </div>
+            <div class="input-group">
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                <span class="icon"><i class="fa fa-lock"></i></span>
+            </div>
+            <div class="input-group">
+                <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+                <span class="icon"><i class="fa fa-phone"></i></span>
+            </div>
+            <div class="input-group">
+                <input type="text" id="CPF" name="CPF" placeholder="Digite seu CPF" required>
+                <span class="icon"><i class="fa fa-id-card"></i></span>
+            </div>
+            <div class="input-group">
+                <input type="date" id="data" name="data" required>
+                <span class="icon"><i class=""></i></span>
+            </div>
+            <button type="submit" class="submit-btn">Cadastrar</button>
+            <div class="login-link">
+               <p>Já tem uma conta?</p>  <a href="login2.html">Entrar</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
