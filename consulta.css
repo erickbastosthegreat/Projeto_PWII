@@ -1,0 +1,51 @@
+/* Definindo uma cor de fundo suave e clara */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9f7ef; /* Verde bem clarinho */
+    color: #333; /* Cor do texto */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #2c6b35; /* Verde mais forte para o título */
+    padding: 20px;
+    background-color: #a8d5ba; /* Verde claro para fundo do título */
+    margin-bottom: 20px;
+}
+
+/* Estilizando a tabela */
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid #2c6b35; /* Cor de borda verde escuro */
+    background-color: #ffffff;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #2c6b35; /* Borda verde escura para as células */
+}
+
+th {
+    background-color: #a8d5ba; /* Verde claro para os cabeçalhos */
+    color: #2c6b35; /* Texto verde mais forte */
+}
+
+td {
+    background-color: #f1fdf3; /* Verde bem clarinho para as células */
+    color: #333; /* Cor do texto nas células */
+}
+
+/* Estilizando as linhas alternadas */
+tr:nth-child(even) {
+    background-color: #d8f0e8; /* Verde claro para linhas alternadas */
+}
+
+/* Hover na tabela */
+tr:hover {
+    background-color: #b6e1d6; /* Efeito de hover em verde mais claro */
+}
