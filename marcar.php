@@ -79,6 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </style>
 </head>
 <body>
+
     <div class="wrapper">
         <?php echo $mensagem; ?>
         <h1>Marcar Consulta</h1>

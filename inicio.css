@@ -8,12 +8,13 @@ body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
     background: linear-gradient(135deg, #1e742b 0%, #3ebd4a 100%);
-    background-image: url('imagens/verde\ fundo.jpg'), 
+    background-image: url('imagens/fundo.jpg'), 
                       linear-gradient(135deg, #1e742b 0%, #3ebd4a 100%);
     background-blend-mode: overlay;
     background-size: cover;
     background-attachment: fixed;
 }
+
 
 header {
     background: rgba(30, 116, 43, 0.90);
@@ -28,10 +29,17 @@ header {
 }
 header h1 {
     font-family: 'Segoe UI', 'Arial', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: 700px;
     letter-spacing: 1px;
-    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 40px 20px 620px;
+    max-width: 200px;
+    background-color: #4bbe67;
+    border-radius: 40px;
+
 }
 .menu-toggle {
     position: absolute;
@@ -40,6 +48,7 @@ header h1 {
     background: #49d366;
     color: #fff;
     border: none;
+    margin: 10px 0px 20px 0px;
     padding: 10px 22px;
     border-radius: 30px;
     font-size: 20px;
@@ -151,6 +160,25 @@ main {
     margin-bottom: 20px;
     text-shadow: 0 2px 12px #1e742b33;
 }
+
+.banner a{
+    text-decoration: none;
+    color: #217a2f;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 10px;
+    border-radius: 24px;
+    background: #fdf2f2;
+    box-shadow: 0 2px 12px 0 #217a2f22;
+
+
+}
 .botao {
     width: 100%;
     padding: 15px 0;
@@ -199,6 +227,12 @@ main {
     margin-bottom: 6px;
     font-weight: 600;
     font-size: 1.1rem;
+    background-color: rgb(36, 94, 51);
+    padding: 8px 5px;
+    max-width: 300px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
 }
 .servico p {
     color: #c3ffef;
