@@ -4,199 +4,225 @@
     box-sizing: border-box;
 }
 
-h1{
-    font-family:'Times New Roman', Times, serif;
-  background-color:rgb(71, 117, 59);
-color: rgb(198, 225, 201);
-border-radius: 40px;
-padding: 10px;
-display: flex;
-justify-content: space-between; /*  */
-margin-right: auto;
-text-align: right; 
-}
 body {
     font-family: Arial, sans-serif;
-    background-image: url('imagens/verde\ fundo.jpg');
-    background-color: #f5f5f5;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e742b 0%, #3ebd4a 100%);
+    background-image: url('imagens/verde\ fundo.jpg'), 
+                      linear-gradient(135deg, #1e742b 0%, #3ebd4a 100%);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-attachment: fixed;
 }
+
 header {
-    background-color: #007b5e;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: flex-start; /* isso aqui era o que precisava mudar para o botão de menu ir para a direita. Antes estava display: space-between */  
-    align-items: center;
-    color: white;
+    background: rgba(30, 116, 43, 0.90);
+    padding: 24px 0 12px 0;
+    text-align: center;
+    color: #fff;
+    border-top-left-radius: 0 0 32px 32px;
+    border-top-right-radius: 0 0 32px 32px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.11);
     position: relative;
-    z-index: 2;
-    gap: 24px;
 }
-.logo {
-  
-  padding: 10px 20px;
-    margin-bottom: 20px; 
-    font-size: 24px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
+header h1 {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
 }
 .menu-toggle {
-    background-color: #009f7f;
-    color: white;
+    position: absolute;
+    left: 30px;
+    top: 24px;
+    background: #49d366;
+    color: #fff;
     border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+    padding: 10px 22px;
+    border-radius: 30px;
     font-size: 20px;
-    border-radius: 5px;
-    transition: background-color 0.2s;
+    cursor: pointer;
+    transition: background .2s;
+    z-index: 20;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
 }
 .menu-toggle:hover {
-    background-color: #005f46;
+    background: #2e8c39;
 }
+
 .navbar {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     width: 250px;
     height: 100vh;
-    background-color: #007b5e;
-    color: white;
-    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    background: rgba(30,116,43,0.97);
+    color: #fff;
+    box-shadow: 2px 0 16px rgba(0,0,0,0.18);
     transform: translateX(-100%);
     transition: transform 0.3s;
-    z-index: 10;
+    z-index: 30;
     display: flex;
     flex-direction: column;
     padding-top: 20px;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
 }
-.navbar.active {
-    transform: translateX(0);
+.navbar.active { transform: translateX(0); }
+.close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    cursor: pointer;
 }
 .navbar .logo {
     justify-content: center;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 .logo-img {
     max-width: 100px;
     height: auto;
 }
-.close-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 32px;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    cursor: pointer;
-}
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 30px;
-    flex-grow: 1;
-}
+.navbar ul { margin-top: 36px; }
 .navbar ul li {
-    border-bottom: 1px solid #009f7f;
+    border-bottom: 1px solid #49d36633;
 }
 .navbar ul li a {
     display: block;
-    color: white;
-    padding: 15px;
+    color: #fff;
+    padding: 18px;
     text-decoration: none;
-    transition: background-color 0.3s, padding-left 0.3s;
+    transition: background .3s, padding-left .3s;
+    font-size: 18px;
+    border-radius: 16px;
 }
 .navbar ul li a:hover {
-    background-color: #009f7f;
-    padding-left: 25px;
+    background: #49d36622;
+    padding-left: 32px;
 }
 .overlay {
     display: none;
     position: fixed;
     left: 0; top: 0; width: 100vw; height: 100vh;
-    background: rgba(0,0,0,0.2);
-    z-index: 5;
+    background: rgba(0,0,0,0.24);
+    z-index: 10;
 }
-.overlay.active {
-    display: block;
-}
+.overlay.active { display: block; }
+
 main {
-    padding: 40px 20px 40px 20px;
-    max-width: 950px;
-    margin: 0 auto;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.banner {
-    background-color: #009f7f;
-    color: rgb(198, 237, 220);
-    text-align: center;
-    padding: 50px 100px 50px 100px;
-    margin-bottom: 40px;
-    border-radius: 40px;
+.glass-card {
+    width: 100%;
+    max-width: 430px;
+    margin: 40px auto 0 auto;
+    background: rgba(39, 121, 53, 0.37);
+    border-radius: 32px;
+    box-shadow: 0 8px 40px 0 rgba(0,0,0,0.17);
+    backdrop-filter: blur(6px);
+    padding: 42px 34px 38px 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
 }
-.banner h1 {
-    margin-bottom: 10px;
+
+.banner h2 {
+    color: #fff;
+    font-size: 2.1rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+    text-shadow: 0 2px 14px #1e742b66;
 }
 .banner p {
+    color: #d4ffe2;
+    font-size: 1.15rem;
     margin-bottom: 20px;
+    text-shadow: 0 2px 12px #1e742b33;
 }
 .botao {
-    padding: 10px 20px;
-    background-color: white;
-    color: #007b5e;
-    text-decoration: none;
-    border-radius: 5px;
+    width: 100%;
+    padding: 15px 0;
+    background: #fdf2f2;
+    color: #217a2f;
     font-weight: bold;
-    transition: background-color 0.2s;
+    border: none;
+    border-radius: 24px;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 12px 0 #217a2f22;
+    transition: background 0.2s, color 0.2s;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto 8px auto;
 }
 .botao:hover {
-    background-color: #e0e0e0;
+    background: #ffeaea;
+    color: #2e8c39;
 }
+
 .servicos {
-  background-color:#009f7f;
-  border-radius: 40px;
-    padding: 40px 0;
-    text-align: center;
+    width: 100%;
+    margin-top: 12px;
+    background: transparent;
+    border-radius: 28px;
+    padding: 0;
 }
-.servicos h2, h3 {
-  background-color:rgb(255, 255, 255);
-color: rgb(16, 122, 60);
-border-radius: 40px;
-padding: 10px;
-display: flex;
-flex-direction: column; /*  */
-text-align: center; 
-    
+.servicos h2 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 7px #1e742b66;
 }
 .servico {
-    margin-bottom: 20px;
-    padding: 20px;
-    color:#b1c1b6;
+    background: rgba(255,255,255,0.10);
+    margin-bottom: 16px;
+    border-radius: 18px;
+    padding: 18px 20px;
+    color: #dcffe9;
+    box-shadow: 0 1px 5px 0 #1e742b22;
+    font-size: 1.07rem;
 }
+.servico h3 {
+    color: #fff;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.servico p {
+    color: #c3ffef;
+    font-size: 0.97rem;
+}
+
 footer {
-    background-color: #333;
-    color: white;
+    background: rgba(30,116,43,0.9);
+    color: #f1f1f1;
     text-align: center;
-    padding: 15px;
-    margin-top: 40px;
+    padding: 17px 8px;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    margin-top: 48px;
+    box-shadow: 0 -3px 16px 0 rgba(0,0,0,0.08);
+    font-size: 0.97rem;
 }
-@media (max-width: 900px) {
-    main {
-        padding: 30px 10px 0 10px;
-    }
-    .content {
-        margin-left: 0;
-    }
-}
+
 @media (max-width: 600px) {
-    .navbar {
-        width: 85vw;
-        max-width: 350px;
+    .glass-card {
+        padding: 23px 7vw 18px 7vw;
     }
-    .banner {
-        padding: 30px 10px;
-    }
-    .botao {
-        width: 100%;
-        padding: 12px 0;
-    }
+    .banner h2 { font-size: 1.25rem; }
+    .servico { font-size: 0.98rem; }
+    .navbar { width: 85vw; }
+    header h1 { font-size: 1.2rem; }
 }

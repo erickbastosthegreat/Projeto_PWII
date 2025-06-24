@@ -15,19 +15,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
     $telefone = $_POST['telefone'];
-    $cpf = $_POST['cpf'];
+    $cpf = $_POST['cpf']; // Use the correct field name as per your HTML form
     $data_nascimento = $_POST['data'];
 
-    
-
-    $cpf = $_POST['CPF'];
-
-    $stmt = $conn->prepare("INSERT INTO cliente (nome, email, senha, telefone, data_nascimento, cpf) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssss", $nome, $temail, $senha, $telefone,$cpf, $data_nascimento);
+    $stmt = $conn->prepare("INSERT INTO cliente (nome, email, senha, telefone, cpf, data_nascimento) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssss", $nome, $email, $senha, $telefone, $cpf, $data_nascimento);
 
     if ($stmt->execute()) {
         // redirecionar após sucesso
-        header("Location: medicos.html");
+        header("Location: inicio.html");
         exit;
     } else {
         echo "Erro ao cadastrar: " . $stmt->error;
@@ -40,3 +36,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </body>
 </html>
+
+<!-- Se você quiser mostrar uma mensagem após o cadastro, pode adicionar aqui -->
