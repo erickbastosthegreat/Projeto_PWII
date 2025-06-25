@@ -7,7 +7,7 @@ $usuario = $_SESSION['id_cliente']; // Ex: $_SESSION['usuario_id'] = 101;
 
 $sql = "SELECT id, data_consulta, hora_consulta FROM consulta WHERE id_cliente = ?";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $usuario);  // Corrigido: substitua $usuarioId por $usuario
+$stmt->bind_param("i", $usuario);  
 $stmt->execute();
 $result = $stmt->get_result();
 ?>
@@ -25,7 +25,7 @@ $result = $stmt->get_result();
     <table>
         <tr>
             <th>ID</th>
-            <th>Consulta</th>
+            <th>Hora</th>
             <th>Data</th>
         </tr>
         <?php while($row = $result->fetch_assoc()): ?>
@@ -36,5 +36,28 @@ $result = $stmt->get_result();
         </tr>
         <?php endwhile; ?>
     </table>
+
+  <a href="inicio.html" class="btn">Volte para o inicio</a>
+
+
+  <style>
+.btn, .btn1 {
+  display: flex;
+  width: 100%;
+  margin: 10px 0 0 0;
+  padding: 14px 0;
+  border-radius: 40px;
+  border: none;
+  background-color: #007b5e;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  justify-content: center;
+
+}
+  </style>
 </body>
 </html>
